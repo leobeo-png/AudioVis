@@ -20,17 +20,15 @@ int main() {
 	}
 
 	sf::Texture texture;
-	if (!texture.loadFromFile("bg.png"))
+	if (!texture.loadFromFile("bg.jpg"))
 	{
 		return -1;
 	}
 	sf::Sprite sprite(texture); // background image
 	
 	sf::SoundBuffer buffer;
-	//music.flac
-	//music_.flac
-	//welcome.flac
-	if (!buffer.loadFromFile("music_.flac")) 
+	
+	if (!buffer.loadFromFile("music.mp3")) // load song (mp3, wav, flac)
 	{
 		return -1;
 	}
@@ -42,9 +40,7 @@ int main() {
 
 	// Text Settings
 	sf::Text text(font);
-	//text.setString("Mitsukiyo - Melodies of Dawn (Piano Ver.)");
-	text.setString("OSTER project - Alice in Musicland (Ending)");
-	//text.setString("Mitsukiyo - Welcome School");
+	text.setString("SongTitle"); // title text
 	text.setCharacterSize(56);
 	text.setPosition({58.f, 3.f});
 	text.setFillColor(sf::Color::White);
